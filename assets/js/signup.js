@@ -49,17 +49,17 @@ $(document).ready(function (){
 				success : function(feedback){
 					setTimeout(function(){
 
-					if(feedback['error'] == 'email_success'){
-                		$(".email-error").html("<div class='text-success'><i class='fa fa-check-circle'></i> available</div>");
-						$("#email").addClass("border-green");
-						$("#email").removeClass("border-red");
-						email = "";
-					}else if(feedback['error'] == 'email_fail'){
-						$(".email-error").html("Sorry, this email already exist");
-						$("#email").addClass("border-red");
-						$("#email").removeClass("border-green");
-						email = "";
-					} 
+						if(feedback['error'] == 'email_success'){
+	                		$(".email-error").html("<div class='text-success'><i class='fa fa-check-circle'></i> available</div>");
+							$("#email").addClass("border-green");
+							$("#email").removeClass("border-red");
+							email = email_store;
+						}else if(feedback['error'] == 'email_fail'){
+							$(".email-error").html("Sorry, this email already exist");
+							$("#email").addClass("border-red");
+							$("#email").removeClass("border-green");
+							email = "";
+						} 
 					}, 3000);
 				}
 			})
@@ -83,7 +83,7 @@ $(document).ready(function (){
         	$(".password-error").html("<div class='text-success'><i class='fa fa-check-circle'></i> Your Password Is Strong!</div>");
 			$("#password").addClass("border-green");
 			$("#password").removeClass("border-red");
-			password = store;
+			password = password_store;
 		}else {
 			$(".password-error").html("8 characters or longer. Combine upper and lowercase letters and numbers");
 			$("#password").addClass("border-red");

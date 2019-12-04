@@ -23,8 +23,12 @@ function signup_submit(){
 		$name= $_POST['name'];
 		$email= $_POST['email'];
 		$password= password_hash($_POST['name'], PASSWORD_DEFAULT);
-		$query = $con->prepare("INSERT INTO users (name, email, password) VALUES (?,?,?)");
+		$query = $db->prepare("INSERT INTO users (name, email, password) VALUES (?,?,?)");
 		$query->execute([$name, $email, $password]);
+		if($query){
+			$_SESSION['user_name'] = $name;
+			echo json_encode(['error' => 'success', 'msg' => 'success.php']);
+		}
 	}
 }
 signup_submit();

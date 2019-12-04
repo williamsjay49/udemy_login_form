@@ -11,26 +11,7 @@
 <body>
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-sm navbar-light bg-light custom-nav" > 	
-	<!-- container	 -->
-	<div class="container">
-		<a href="#" class="navbar-brand">Udemy SignUp and Login</a>
-		
-		<!-- button -->
-		<button class="navbar-toggler" type="button" data-target="#mynav" data-toggle="collapse">
-			<span class="navbar-toggle-icon"></span>
-		</button><!-- /button -->
-
-		<!-- collapse -->
-		<div class="collapse navbar-collapse" id="mynav">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a href="#" class="nav-line">Home</a>
-				</li>
-			</ul>
-		</div><!-- /collapse -->
-	</div><!-- /container -->
-</nav><!-- /navbar -->
+<?php include 'parts/nav.php' ?>
 
 <div class="container">
 	<div class="row">
@@ -59,6 +40,9 @@
 					</div><!-- /card-header -->
 					<div class="card-body">
 						<form id="signup_submit">
+							<div class="form-group show-progress">
+								
+							</div>
 							<div class="form-group">
 								<input type="text" name="name" id="name" class="form-control" placeholder="Enter name...">
 								<div class="name-error error"></div>
@@ -82,7 +66,7 @@
 								<button type="button" id="submit" class="btn btn-success btn-block form-btn">Create Account</button>
 							</div><!-- /form-group-->
 							<div class="form-group">
-								<a href="" id="login">Already have an Account</a>
+								<a href="#" id="login">Already have an Account</a>
 							</div>
 						</form><!-- /form -->
 					</div><!--/card-body -->
@@ -104,16 +88,18 @@
 					<div class="card-body">
 						<form action="">
 							<div class="form-group">
-								<input type="email" id="email" class="form-control" placeholder="Enter Email...">
+								<input type="email" id="login-email" class="form-control" placeholder="Enter Email...">
+								<div class="login-email-error error"></div>
 							</div><!-- /form-group-->
 							<div class="form-group">
-								<input type="password" id="password" class="form-control" placeholder="Enter Password...">
+								<input type="password" id="login-password" class="form-control" placeholder="Enter Password...">
+								<div class="login-password-error error"></div>
 							</div><!-- /form-group-->
 							<div class="form-group">
-								<button type="button" id="submit" class="btn btn-success btn-block form-btn">Login</button>
+								<button type="button" id="login-submit" class="btn btn-success btn-block form-btn">Login</button>
 							</div><!-- /form-group-->
 							<div class="form-group">
-								<a href="" id="signup">Create New Account</a>
+								<a href="#" id="signup">Create New Account</a>
 							</div>
 						</form><!-- /form -->
 					</div><!--/card-body -->
