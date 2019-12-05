@@ -88,11 +88,11 @@
 					<div class="card-body">
 						<form action="">
 							<div class="form-group">
-								<input type="email" id="login-email" class="form-control" placeholder="Enter Email...">
+								<input type="email" name="login-email" id="login-email" class="form-control" placeholder="Enter Email...">
 								<div class="login-email-error error"></div>
 							</div><!-- /form-group-->
 							<div class="form-group">
-								<input type="password" id="login-password" class="form-control" placeholder="Enter Password...">
+								<input type="password" name="login-password" id="login-password" class="form-control" placeholder="Enter Password...">
 								<div class="login-password-error error"></div>
 							</div><!-- /form-group-->
 							<div class="form-group">
